@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        <h:form> 
+         
+            <h:inputText id="datafield" size="30" label="datalabel" value="#{convManagedBean.datafield}" required="true">
+ 
+             </h:inputText>
+
+            <h:selectOneRadio id="convradio" required="true" label="radiolabel" value="#{convManagedBean.convradio}">
+                <f:selectItem itemValue="ftomtr" itemLabel="Feet to Meter"/>
+    <f:selectItem  itemValue="gtoltr" itemLabel="Gallon to Liter"/>
+   
+    </h:selectOneRadio>
+            <h:commandButton id="submit" value="Submit">
+     <f:ajax event="click" execute="datafield convradio" render="convresult" />
+            </h:commandButton><br/>
+            <h:outputText id="convresult"  value="#{convManagedBean.send()}"/>
+    </h:form> 
+    </h:body>
+</html>
