@@ -57,10 +57,8 @@ public class ConvManagedBean {
         String str = "";
         try {
             // Create connection, message factory, and SOAP factory
-            SOAPConnectionFactory soapConnectionFactory
-                    = SOAPConnectionFactory.newInstance();
-            SOAPConnection connection
-                    = soapConnectionFactory.createConnection();
+            SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
+            SOAPConnection connection = soapConnectionFactory.createConnection();
             MessageFactory messageFactory = MessageFactory.newInstance();
             SOAPFactory soapFactory = SOAPFactory.newInstance();
 
